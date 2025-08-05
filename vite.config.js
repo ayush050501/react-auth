@@ -57,13 +57,24 @@ export default defineConfig({
         extensions: ['.js', '.jsx'],
     },
     build: {
+        lib: {
+            entry: path.resolve(__dirname, 'src/index.jsx'), // Entry point - where your main exports are
+            name: 'AuthPackage', // Global variable name when used in browser via <script> tag
+            formats: ['es', 'umd'], // Output formats: ES modules + UMD (Universal Module Definition)
+            fileName: (format) => `auth-package.${format}.js` // Output filenames for each format
+        },
         outDir: 'build',
         rollupOptions: {
+            // Don't bundle React - expect it from consuming app
+            external: ['react', 'react-dom'],
+            
+            // Global variables for UMD build (browser usage)
             output: {
-                entryFileNames: 'assets/[hash].js',
-                chunkFileNames: 'assets/[hash].js',
-                assetFileNames: 'assets/[hash][extname]'
-            }
+                globals: {
+                react: 'React',
+                'react-dom': 'ReactDOM'
+                }
+            },
         }
     },
     server: {
