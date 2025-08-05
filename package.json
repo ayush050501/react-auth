@@ -5,21 +5,21 @@
   "description": "Reusable React authentication components and hooks",
   "type": "module",
 
-  "main": "./dist/auth-package.umd.js",
-  "module": "./dist/auth-package.es.js",
-  "types": "./dist/index.d.ts",
+  "main": "./build/auth-package.umd.js",
+  "module": "./build/auth-package.es.js",
+  "types": "./build/index.d.ts",
 
   "exports": {
     ".": {
-      "import": "./dist/auth-package.es.js",
-      "require": "./dist/auth-package.umd.js",
-      "types": "./dist/index.d.ts"
+      "import": "./build/auth-package.es.js",
+      "require": "./build/auth-package.umd.js",
+      "types": "./build/index.d.ts"
     },
-    "./styles": "./dist/style.css"
+    "./styles": "./build/style.css"
   },
   
   "files": [
-    "dist",
+    "build",
     "README.md"
   ],
 

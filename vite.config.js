@@ -63,7 +63,7 @@ export default defineConfig({
             formats: ['es', 'umd'], // Output formats: ES modules + UMD (Universal Module Definition)
             fileName: (format) => `auth-package.${format}.js` // Output filenames for each format
         },
-        outDir: 'dist',
+        outDir: 'build',
         rollupOptions: {
             // Don't bundle React - expect it from consuming app
             external: ['react', 'react-dom'],
