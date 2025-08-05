@@ -1,8 +1,33 @@
 {
-  "name": "react-setup-app",
+  "name": "react-auth-package",
   "private": true,
   "version": "0.0.0",
+  "description": "Reusable React authentication components and hooks",
   "type": "module",
+
+  "main": "./dist/auth-package.umd.js",
+  "module": "./dist/auth-package.es.js",
+  "types": "./dist/index.d.ts",
+
+  "exports": {
+    ".": {
+      "import": "./dist/auth-package.es.js",
+      "require": "./dist/auth-package.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/style.css"
+  },
+  
+  "files": [
+    "dist",
+    "README.md"
+  ],
+
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+
   "scripts": {
     "dev": "vite --host --open",
     "start": "vite --host --open",
@@ -53,5 +78,25 @@
     "vite-plugin-clean": "^2.0.1",
     "vite-plugin-compression2": "^2.2.0",
     "vite-plugin-eslint": "^1.8.1"
-  }
+  },
+
+  "keywords": [
+    "react",
+    "authentication",
+    "auth",
+    "login",
+    "components",
+    "hooks"
+  ],
+  
+  "author": "Ayush Agrawal <ayushagrawal133.skb@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayush050501/react-auth"
+  },
+  "bugs": {
+    "url": "https://github.com/ayush050501/issues"
+  },
+  "homepage": "https://github.com/ayush050501#readme"
 }
