@@ -1,5 +1,5 @@
 {
-  "name": "react-auth-package",
+  "name": "react-auth",
   "private": true,
   "version": "0.0.0",
   "description": "Reusable React authentication components and hooks",
